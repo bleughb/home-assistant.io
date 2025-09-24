@@ -61,3 +61,27 @@ The `get_forecasts` action returns an array of forecasts for the requested chann
 | ----------------- | -------- | --------------------------------------------------------------------- |
 | `config_entry_id` | Yes      | The config entry of the site to get forecasts for.                    |
 | `channel_type`    | Yes      | The channel type to fetch. Options: general, controller_load, feed_in |
+
+
+## Example Returned Data for Feed In Price useage 'sensor.amber_feed_in_price'
+
+| **Data Atribute **                      |** Data**                        |
+|---------------------------------------------------------------------------|
+| state_class:                            | measurement                     | 
+| duration:                               | 5                               | 
+| date:                                   | 2025-09-24                      | 
+| per_kwh:                                | -0.04                           |
+| nem_date:                               | 2025-09-24T13:05:00+10:00       |
+| spot_per_kwh:                           |-0.03                            |
+| start_time:                             | 2025-09-24T03:00:01+00:00       | 
+| end_time:                               | 2025-09-24T03:05:00+00:00       | 
+| renewables:                             | 83                              |
+| **estimate:                             | true**                          |
+| spike_status:                           | none                            |
+| channel_type:                           | feedIn                          |
+| unit_of_measurement:                    | $/kWh                           |
+| attribution:                            | Data provided by Amber Electric |
+| friendly_name:                          | Amber - Feed In Price           |
+
+*** Note the estimate: line, any price data only becomes valid upon seeing the estimate: false flag**
+
